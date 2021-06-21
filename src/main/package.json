@@ -1,0 +1,57 @@
+{
+  "name": "holonus-software-backend",
+  "version": "1.0.0",
+  "description": "Holonus software backend systeym",
+  "homepage": "https://holonus.io/",
+  "main": "app.js",
+  "scripts": {
+    "start": "node web_general/app",
+    "test": "mocha web_general/test/test --color --exit --recursive --timeout 30000"
+  },
+  "support": {
+    "issues": "https://github.com/holonus/holonus-blockchain/issues"
+  },
+  "author": {
+    "name" : "FRPA.",
+    "url" : "https://frpa.tech/"
+  },
+  "license": "SEE LICENSE IN LICENSE.holonus",
+  "bugs" : "https://frpa.tech/contact.html",
+  "repogitory" : "https://github.com/holonus/holonus-blockchain/",
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "apidoc": "^0.25.0",
+    "aws-sdk": "^2.798.0",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.2",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "helmet": "^4.1.1",
+    "http-status-codes": "^2.1.4",
+    "ipfs-http-client": "^47.0.1",
+    "jquery": "^3.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwk-to-pem": "^2.0.4",
+    "log4js": "^6.3.0",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.32",
+    "mongoose": "^5.10.9",
+    "morgan": "^1.10.0",
+    "node-rsa": "^1.1.1",
+    "node-schedule": "^1.3.2",
+    "nodemailer": "^6.4.16",
+    "sendmail": "^1.6.1",
+    "web3": "^1.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.11.0",
+    "mocha": "^8.1.3",
+    "prettier": "^2.2.1",
+    "request": "^2.88.2"
+  }
+}

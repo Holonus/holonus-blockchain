@@ -1,0 +1,95 @@
+{
+    "appenders": {
+        "ConsoleLogAppender": {
+            "type": "console"
+        },
+        "SystemLogAppender": {
+            "type": "dateFile",
+            "filename": "../log/system.log",
+            "pattern": ".yyyy-MM-dd",
+            "backups": 30
+        },
+        "BatchLogAppender": {
+            "type": "dateFile",
+            "filename": "../log/batch.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 30
+        },
+        "RequestLogAppender": {
+            "type": "dateFile",
+            "filename": "../log/request.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 30
+        },
+        "ResponseAppender": {
+            "type": "dateFile",
+            "filename": "../log/response.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 30
+        },
+        "DBLogAppender": {
+            "type": "dateFile",
+            "filename": "../log/db.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 30
+        },
+        "IPFSLogAppender": {
+            "type": "dateFile",
+            "filename": "../log/ipfs.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 30
+        },
+        "CognitoLogAppender": {
+            "type": "dateFile",
+            "filename": "../log/cognito.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 30
+        },
+        "ContractLogAppender": {
+            "type": "dateFile",
+            "filename": "../log/contract.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 30
+        },
+        "ServiceLogAppender": {
+            "type": "dateFile",
+            "filename": "../log/service.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 30
+        }
+    },
+    "categories": {
+        "default": {
+            "appenders": ["SystemLogAppender"],
+            "level": "debug"
+        },
+        "batch": {
+            "appenders": ["BatchLogAppender"],
+            "level": "debug"
+        },
+        "request": {
+            "appenders": ["RequestLogAppender"],
+            "level": "debug"
+        },
+        "response":{
+            "appenders": ["ResponseAppender"],
+            "level": "debug"
+        },
+        "db": {
+            "appenders": ["DBLogAppender"],
+            "level": "debug"
+        },
+        "ipfs": {
+            "appenders": ["IPFSLogAppender"],
+            "level": "debug"
+        },
+        "contract": {
+            "appenders": ["ContractLogAppender"],
+            "level": "debug"
+        },
+        "service": {
+            "appenders": ["ServiceLogAppender"],
+            "level": "debug"
+        }
+    }
+}

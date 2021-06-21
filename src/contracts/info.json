@@ -1,0 +1,2552 @@
+{
+    "current": {
+        "HolonusFileService": {
+            "abi": [
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "_recordStorage",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "_fileStorage",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "_keyStorage",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "_userStorage",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "constructor",
+                    "signature": "constructor"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "enable",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "enableAllowAccount",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x09f775bd"
+                },
+                {
+                    "inputs": [],
+                    "name": "getOwner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x893d20e8"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "isEnableAllowAccount",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x046edcda"
+                },
+                {
+                    "inputs": [],
+                    "name": "setLocked",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x10c1952f"
+                },
+                {
+                    "inputs": [],
+                    "name": "setUnlocked",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x8c6e9fc4"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xf2fde38b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "recordId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "data",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "setRecord",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xc1880a98"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "recordId",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "getRecord",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x11dd8845"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "fileId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "hash",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "setFile",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xa1478ed0"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "fileId",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "getFile",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0xe0876aa8"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "publickeyId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "publicKey",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "setKey",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xe6c780dd"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "publickeyId",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "getKey",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0xd37aec92"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "userId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "profileData",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "setUserProfileData",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xe3886567"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "userId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "privateData",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "setUserPrivateData",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xfe30b54b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "userId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "medicalCertificate",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "setUserMedicalCertificate",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x7b70d811"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "userId",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "getUser",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x31feb671"
+                }
+            ],
+            "address": "0x357ab0Ed7501C6771e026dbd22e8F8e3C9EA1648"
+        },
+        "LedgerStorage": {
+            "abi": null,
+            "address": null
+        },
+        "RecordStorage": {
+            "abi": [
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "enable",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "enableAllowAccount",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x09f775bd"
+                },
+                {
+                    "inputs": [],
+                    "name": "getOwner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x893d20e8"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "isEnableAllowAccount",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x046edcda"
+                },
+                {
+                    "inputs": [],
+                    "name": "setLocked",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x10c1952f"
+                },
+                {
+                    "inputs": [],
+                    "name": "setUnlocked",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x8c6e9fc4"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xf2fde38b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "recordId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "data",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "set",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xe942b516"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "recordId",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "get",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x693ec85e"
+                }
+            ],
+            "address": "0x9d396c9E907E9b482AA317C712266e8FDd89b9d7"
+        },
+        "FileStorage": {
+            "abi": [
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "enable",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "enableAllowAccount",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x09f775bd"
+                },
+                {
+                    "inputs": [],
+                    "name": "getOwner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x893d20e8"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "isEnableAllowAccount",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x046edcda"
+                },
+                {
+                    "inputs": [],
+                    "name": "setLocked",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x10c1952f"
+                },
+                {
+                    "inputs": [],
+                    "name": "setUnlocked",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x8c6e9fc4"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xf2fde38b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "fileId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "hash",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "set",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xe942b516"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "fileId",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "get",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x693ec85e"
+                }
+            ],
+            "address": "0x1E6145fa76403338A976343Ac8C940A6c601964F"
+        },
+        "KeyStorage": {
+            "abi": [
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "enable",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "enableAllowAccount",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x09f775bd"
+                },
+                {
+                    "inputs": [],
+                    "name": "getOwner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x893d20e8"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "isEnableAllowAccount",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x046edcda"
+                },
+                {
+                    "inputs": [],
+                    "name": "setLocked",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x10c1952f"
+                },
+                {
+                    "inputs": [],
+                    "name": "setUnlocked",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x8c6e9fc4"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xf2fde38b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "publickeyId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "publicKey",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "set",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xe942b516"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "publickeyId",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "get",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x693ec85e"
+                }
+            ],
+            "address": "0x82ad501B69366dc94D65c1C6cBAbEE75bc97c441"
+        },
+        "UserStorage": {
+            "abi": [
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "enable",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "enableAllowAccount",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x09f775bd"
+                },
+                {
+                    "inputs": [],
+                    "name": "getOwner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x893d20e8"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "isEnableAllowAccount",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x046edcda"
+                },
+                {
+                    "inputs": [],
+                    "name": "setLocked",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x10c1952f"
+                },
+                {
+                    "inputs": [],
+                    "name": "setUnlocked",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x8c6e9fc4"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xf2fde38b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "userId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "profileData",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "setProfileData",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x5f884cb6"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "userId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "privateData",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "setPrivateData",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xfd73e6ad"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "userId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "medicalCertificate",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "setMedicalCertificate",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x5ff84cf3"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "userId",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "get",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x693ec85e"
+                }
+            ],
+            "address": "0xb402AdfaB442D32d640D2cFE836D7A47F3B17867"
+        },
+        "HolonusCoinService": {
+            "abi": [
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "strageAddress",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "manageAddress",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "tokenAddress",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "constructor",
+                    "signature": "constructor"
+                },
+                {
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "from",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "to",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": false,
+                            "internalType": "uint256",
+                            "name": "value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "Transfer",
+                    "type": "event",
+                    "signature": "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+                },
+                {
+                    "inputs": [],
+                    "name": "owner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x8da5cb5b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xf2fde38b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "reliability",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "setReliability",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x9d3ac3d9"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getReliability",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0xbb0edcfa"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getFullReliability",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x8a252132"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getEvaAccountCnt",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x13d4ab54"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "sender",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getTrustworthy",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "int256",
+                            "name": "",
+                            "type": "int256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x638fd0f3"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "sender",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "int256",
+                            "name": "trustworthy",
+                            "type": "int256"
+                        }
+                    ],
+                    "name": "CallEvaluateReliability",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x0cb602bc"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "value",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint8",
+                            "name": "decimals",
+                            "type": "uint8"
+                        }
+                    ],
+                    "name": "setAdjustParameter",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x28e8bb8f"
+                },
+                {
+                    "inputs": [],
+                    "name": "getAdjustParameter",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0xed1ebf3c"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getTotalPoint",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x89c82e85"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getPoint",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x4ff531b6"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getReflectToken",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x4e5af092"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "sender",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint8",
+                            "name": "workPoint",
+                            "type": "uint8"
+                        }
+                    ],
+                    "name": "CallEvaluatePost",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x99d8a172"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "sender",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "reflectToken",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x7c56eab8"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "_to",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "_value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "transferToken",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x1072cbea"
+                }
+            ],
+            "address": "0xBA46443906dD3318CB2814D96b4572c282EB14A1"
+        },
+        "EternalStorage": {
+            "abi": [
+                {
+                    "inputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "constructor",
+                    "signature": "constructor"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "allowAccount",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x1acc948c"
+                },
+                {
+                    "inputs": [],
+                    "name": "owner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x8da5cb5b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xf2fde38b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "enable",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "enableAllowAccount",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x09f775bd"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "isEnabled",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x9015d371"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "spender",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getAddrGrpUIntValue",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x55c5e1e6"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "spender",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "setAddrGrpUIntValue",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x63aac5be"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "spender",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getAddrGrpIntValue",
+                    "outputs": [
+                        {
+                            "internalType": "int256",
+                            "name": "",
+                            "type": "int256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0xa1ee5f90"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "spender",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "int256",
+                            "name": "value",
+                            "type": "int256"
+                        }
+                    ],
+                    "name": "setAddrGrpIntValue",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x39fcf261"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "spender",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getAddrUserInfo",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "int256",
+                            "name": "",
+                            "type": "int256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x6c863552"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "spender",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "int256",
+                            "name": "intVal",
+                            "type": "int256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "uintVal",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "setAddrUserInfo",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x83d5c0be"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getAddrUIntValue",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x3ec83ada"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "setAddrUIntValue",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xf74d9b5d"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getAddrIntValue",
+                    "outputs": [
+                        {
+                            "internalType": "int256",
+                            "name": "",
+                            "type": "int256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x1dc190d2"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "int256",
+                            "name": "value",
+                            "type": "int256"
+                        }
+                    ],
+                    "name": "setAddrIntValue",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x1b05388d"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getAddrBooleanValue",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x7b970ece"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "value",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "setAddrBooleanValue",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x3a7be7e4"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "name": "getUIntValue",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0xbdc963d8"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "setUIntValue",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x3562fd20"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "name": "getStringValue",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0xa209a29c"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "value",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "setStringValue",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xf5866066"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "name": "getAddressValue",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x4c77e5ba"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "value",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "setAddressValue",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x5a2bf25a"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "name": "getBytesValue",
+                    "outputs": [
+                        {
+                            "internalType": "bytes",
+                            "name": "",
+                            "type": "bytes"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x44bfa56e"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "value",
+                            "type": "bytes"
+                        }
+                    ],
+                    "name": "setBytesValue",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xc9a52d2c"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "name": "getBytes32Value",
+                    "outputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x025ec81a"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "bytes32",
+                            "name": "value",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "name": "setBytes32Value",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x25cf512d"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "name": "getBooleanValue",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x17e7dd22"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "value",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "setBooleanValue",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x3eba9ed2"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "name": "getIntValue",
+                    "outputs": [
+                        {
+                            "internalType": "int256",
+                            "name": "",
+                            "type": "int256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x9007127b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "int256",
+                            "name": "value",
+                            "type": "int256"
+                        }
+                    ],
+                    "name": "setIntValue",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xa77aa49e"
+                }
+            ],
+            "address": "0xf9aDd5fAd315247785d40D84743F84fD15aF3082"
+        },
+        "ManageStorage": {
+            "abi": [
+                {
+                    "inputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "constructor",
+                    "signature": "constructor"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "allowAccount",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x1acc948c"
+                },
+                {
+                    "inputs": [],
+                    "name": "owner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x8da5cb5b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xf2fde38b"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "enable",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "enableAllowAccount",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x09f775bd"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "index",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "getAccountIndex",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x828fcf7e"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "getAccountCount",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x0740b5b8"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "record",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "sender",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "AddManageAccount",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xe9500c59"
+                }
+            ],
+            "address": "0x4E683B4fC763A0298C9781751730B65F21222ECd"
+        },
+        "TokenERC20": {
+            "abi": [
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "storageAddress",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "constructor",
+                    "signature": "constructor"
+                },
+                {
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "tokenOwner",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "spender",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": false,
+                            "internalType": "uint256",
+                            "name": "tokens",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "Approval",
+                    "type": "event",
+                    "signature": "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"
+                },
+                {
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "from",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "to",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": false,
+                            "internalType": "uint256",
+                            "name": "value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "Transfer",
+                    "type": "event",
+                    "signature": "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+                },
+                {
+                    "inputs": [],
+                    "name": "decimals",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x313ce567"
+                },
+                {
+                    "inputs": [],
+                    "name": "initialSupply",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x378dc3dc"
+                },
+                {
+                    "inputs": [],
+                    "name": "name",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x06fdde03"
+                },
+                {
+                    "inputs": [],
+                    "name": "owner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x8da5cb5b"
+                },
+                {
+                    "inputs": [],
+                    "name": "symbol",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x95d89b41"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xf2fde38b"
+                },
+                {
+                    "inputs": [],
+                    "name": "Init",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x57a86f7d"
+                },
+                {
+                    "inputs": [],
+                    "name": "totalSupply",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x18160ddd"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "_owner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "balanceOf",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "balance",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0x70a08231"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "_to",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "_value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "transfer",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0xa9059cbb"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "_from",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "_to",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "_value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "transferFrom",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "success",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x23b872dd"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "_spender",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "_value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "approve",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "success",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "signature": "0x095ea7b3"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "_owner",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "_spender",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "allowance",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "remaining",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true,
+                    "signature": "0xdd62ed3e"
+                }
+            ],
+            "address": "0x9b61FB08196fE0EAfC3fdC0Dc33bCEA7aB197793"
+        }
+    },
+    "last": {
+        "HolonusFileService": {
+            "abi": null,
+            "address": null
+        },
+        "LedgerStorage": {
+            "abi": null,
+            "address": null
+        },
+        "RecordStorage": {
+            "abi": null,
+            "address": null
+        },
+        "FileStorage": {
+            "abi": null,
+            "address": null
+        },
+        "KeyStorage": {
+            "abi": null,
+            "address": null
+        },
+        "UserStorage": {
+            "abi": null,
+            "address": null
+        },
+        "HolonusCoinService": {
+            "abi": null,
+            "address": null
+        },
+        "EternalStorage": {
+            "abi": null,
+            "address": null
+        },
+        "ManageStorage": {
+            "abi": null,
+            "address": null
+        },
+        "TokenERC20": {
+            "abi": null,
+            "address": null
+        }
+    },
+    "owner": "0x67952a989eCd230FeC9407BE57826d9300E13186",
+    "networkid": "10"
+}

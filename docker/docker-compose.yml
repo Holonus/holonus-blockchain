@@ -1,0 +1,137 @@
+version: '3.7'
+
+services:
+   # ------------------------------------------------------------ MongoDB
+   mongodb1:
+    build:
+        context: ./mongo/node1
+        dockerfile: Dockerfile
+    working_dir: /root/mongo/
+    ports:
+        - "37001:37001"
+    container_name: mongodb_1
+    hostname: mongodb_1
+    entrypoint: [ "mongod", "--config", "/etc/mongod_1.conf" ]
+    volumes:
+        - /opt/frpa/holonus/data/mongo/node1/data/db:/data/db
+        - ./mongo/node1/mongod_1.conf:/etc/mongod_1.conf
+    environment:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: password
+        MONGO_INITDB_DATABASE: holonus
+        TZ: Asia/Tokyo
+    mongodb2:
+        build:
+            context: ./mongo/node2
+            dockerfile: Dockerfile
+        working_dir: /root/mongo/
+        ports:
+            - "37002:37002"
+        container_name: mongodb_2
+        hostname: mongodb_2
+        entrypoint: [ "mongod", "--config", "/etc/mongod_2.conf" ]
+        volumes:
+            - /opt/frpa/holonus/data/mongo/node2/data/db:/data/db
+            - ./mongo/node2/mongod_2.conf:/etc/mongod_2.conf
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: password
+            MONGO_INITDB_DATABASE: holonus
+            TZ: Asia/Tokyo
+    mongodb3:
+        build:
+            context: ./mongo/node3
+            dockerfile: Dockerfile
+        working_dir: /root/mongo/
+        ports:
+            - "37003:37003"
+        container_name: mongodb_3
+        hostname: mongodb_3
+        entrypoint: [ "mongod", "--config", "/etc/mongod_3.conf" ]
+        volumes:
+            - /opt/frpa/holonus/data/mongo/node3/data/db:/data/db
+            - ./mongo/node3/mongod_3.conf:/etc/mongod_3.conf
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: password
+            MONGO_INITDB_DATABASE: holonus
+            TZ: Asia/Tokyo
+
+    # ------------------------------------------------------------ Go-Ethereum
+    geth_node1:
+        build:
+            context: ./geth/node1
+            dockerfile: Dockerfile
+        working_dir: /root/eth
+        container_name: geth_node1
+        hostname: geth_1
+        ports:
+            - "8501:8501"
+            - "30311:30311"
+        volumes:
+            - /opt/frpa/holonus/data/geth/node1:/root/eth
+        command: --networkid 464940 --port 30311 --nodiscover --maxpeers 4 --datadir /root/eth --mine --miner.threads 1 --http --http.addr=0.0.0.0 --http.port=8502 --http.corsdomain='*' --http.api 'admin,db,debug,eth,miner,net,personal,shh,txpool,web3' --ws --ws.addr=0.0.0.0 --ws.port=8546 --ws.origins='*' --ws.api='admin,db,debug,eth,miner,net,personal,shh,txpool,web3' --unlock 0 --password /root/eth/password.txt --allow-insecure-unlock
+    geth_node2:
+        build:
+            context: ./geth/node2
+            dockerfile: Dockerfile
+        working_dir: /root/eth
+        container_name: geth_node2
+        hostname: geth_2
+        ports:
+            - "8502:8502"
+            - "30312:30312"
+        volumes:
+            - /opt/frpa/holonus/data/geth/node2:/root/eth
+        command: --networkid 464940 --port 30312 --nodiscover --maxpeers 4 --datadir /root/eth --mine --miner.threads 1 --http --http.addr=0.0.0.0 --http.port=8502 --http.corsdomain='*' --http.api 'admin,db,debug,eth,miner,net,personal,shh,txpool,web3' --ws --ws.addr=0.0.0.0 --ws.port=8546 --ws.origins='*' --ws.api='admin,db,debug,eth,miner,net,personal,shh,txpool,web3' --unlock 0 --password /root/eth/password.txt --allow-insecure-unlock
+
+    # ------------------------------------------------------------ IPFS
+    ipfs_node1:
+        build:
+            context: ./ipfs/node1
+            dockerfile: Dockerfile
+        working_dir: /data
+        container_name: ipfs01
+        hostname: ipfs01
+        volumes:
+            - /opt/frpa/holonus/data/ipfs/node1/_data_ipfs:/data/ipfs
+        ports:
+            - "5001:5001"
+    ipfs_node2:
+        build:
+            context: ./ipfs/node2
+            dockerfile: Dockerfile
+        working_dir: /data
+        container_name: ipfs02
+        hostname: ipfs02
+        volumes:
+            - /opt/frpa/holonus/data/ipfs/node2/_data_ipfs:/data/ipfs
+        ports:
+            - "5002:5001"
+
+    # ------------------------------------------------------------ Web-API
+    web_admin:
+        build:
+            context: ./main/web_admin
+            dockerfile: Dockerfile
+        working_dir: /opt/frpa/holonus/src/services/web_admin
+        container_name: web_admin
+        hostname: web_admin
+        volumes:
+            - /opt/frpa/holonus/src/services:/opt/frpa/holonus/src/services
+        ports:
+            - "3001:3000"
+    web_general:
+        build:
+            context: ./main/web_general
+            dockerfile: Dockerfile
+        working_dir: /opt/frpa/holonus/src/services/web_general
+        container_name: web_general
+        hostname: web_general
+        volumes:
+            - /opt/frpa/holonus/src/services:/opt/frpa/holonus/src/services
+        ports:
+            - "3002:3000"
+
+volumes:
+    mongodb-data:

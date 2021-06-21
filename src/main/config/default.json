@@ -1,0 +1,31 @@
+{
+    "ConfigName" : "dev_holonus",
+    "stub": false,
+    "authMode" : "default", 
+    "db": {
+        "url": "mongodb://127.0.0.1:8001,127.0.0.1:8002,127.0.0.1:8003/",
+        "option": {
+            "authSource": "admin",
+            "user": "",
+            "pass": "",
+            "dbName": "holonus",
+            "replicaSet": "rs0",
+            "useCreateIndex": true,
+            "useNewUrlParser": true,
+            "useUnifiedTopology": true
+        }
+    },
+    "web" : {
+        "port": "8000",
+        "secret" : "IWANTEDTOSEEAMOONVERYMUCHATTHATTIME"
+    },
+    "bc": {
+        "url": "http://localhost:8545",
+        "account": "",
+        "password": "",
+        "networkId": "10"
+    },
+    "ipfs": {
+        "url": "http://localhost:5001/"
+    }
+}

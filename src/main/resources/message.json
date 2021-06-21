@@ -1,0 +1,67 @@
+{
+    "statusCode" :{
+        "200": "OK",
+        "201": "New Record Created",
+        "202": "Registered To DB, BC Not Yet",
+        "204": "Deleting record succeed",
+        "400": "Bad Request",
+        "401": "Unauthorized ",
+        "403": "Access Forbidden",
+        "404": "Record Not Found",
+        "405": "Method Not Allowed",
+        "406": "DB Registration Error",
+        "409": "Conflict",
+        "415": "Unsupported Media Type",
+        "429": "Too Many Requests",
+        "500": "Internal Server Error",
+        "503": "Service Unavailable"
+    },
+    "error": {
+        "db": {
+            "file": {
+                "createError": "File create failure in database",
+                "findError": "File find failure in database",
+                "updateError": "File update failure in database",
+                "conflictError": "File is conflict in database",
+                "notfoundError": "File is not found in database"
+            },
+            "key": {
+                "createError": "Key create failure in database",
+                "findError": "Key find failure in database",
+                "updateError": "Key update failure in database",
+                "conflictError": "Key is conflict in database",
+                "notfoundError": "Key is not found in database"
+            },
+            "user": {
+                "createError": "User create failure in database",
+                "findError": "User find failure in database",
+                "updateError": "User update failure in database",
+                "conflictError": "User is conflict in database",
+                "notfoundError": "User is not found in database"
+            }
+        },
+        "bc": {
+            "file": {
+                "setError": "File set failure in blockchain",
+                "getError": "File get failure in blockchain",
+                "notfoundError": "File is not found in blockchain"
+            },
+            "key": {
+                "setError": "Key set failure in blockchain",
+                "getError": "Key get failure in blockchain",
+                "notfoundError": "Key is not found in blockchain"
+            },
+            "coin": {
+                "transferError": "Transferring coin failed during blockchain process",
+                "getError": "Getting balance failed during blockchain process"
+            }
+        },
+        "ipfs": {
+            "file": {
+                "addError": "File add failure in ipfs",
+                "getError": "File get failure in ipfs",
+                "notfoundError": "File is not found in ipfs"
+            }
+        }
+    }
+}
